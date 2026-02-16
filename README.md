@@ -35,8 +35,8 @@
 </details>
 
 ## Usage
-
-1. copy all the files from your flavor of your choice in [`themes`](./themes) into `~/.config/rmpc/`
+1. Ensure you have both `rmpc` and `cava` installed.
+2. Copy all the files from the flavor of your choice from [`themes`](./themes) into `~/.config/rmpc/`
 
 ## 💝 Thanks to
 
