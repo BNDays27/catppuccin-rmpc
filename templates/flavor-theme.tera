@@ -27,7 +27,7 @@ whiskers:
         inactive_style: (fg: "#{{palette.text.hex}}", bg: "#{{palette.base.hex}}"),
     ),
     highlighted_item_style: (fg: "#{{palette.mauve.hex}}", modifiers: "Bold"),
-    current_item_style: (fg: "#{{palette.mauve.hex}}", bg: "#{{palette.surface1.hex}}", modifiers: "Bold"),
+    current_item_style: (bg: "#{{palette.surface1.hex}}", modifiers: "Bold"),
     borders_style: (fg: "#{{palette.overlay2.hex}}"),
     highlight_border_style: (fg: "#{{palette.text.hex}}"),
     symbols: (
@@ -80,13 +80,44 @@ whiskers:
 	    alignment: Left
         ),
     ],
+
+header: (
+	rows: [
+	(
+		left: [],
+		center: [],
+		right: [
+		  (kind: Text(" ("), style: (fg: "#{{palette.text.hex}}", modififiers: "Bold")),
+		  (kind: Property(Status(RepeatV2(on_label: "", off_label: "",
+                                         on_style: (fg: "#{{palette.green.hex}}", modifiers: "Bold"),
+                                         off_style: (fg: "#{{palette.surface2.hex}}", modifiers: "Bold"))))),
+
+		  (kind: Text(" | "), style: (fg: "#{{palette.text.hex}}", modififiers: "Bold")),
+
+		  (kind: Property(Status(RandomV2(on_label: "", off_label: "",
+                                         on_style: (fg: "#{{palette.pink.hex}}", modifiers: "Bold"),
+                                         off_style: (fg: "#{{palette.surface2.hex}}", modifiers: "Bold"))))), 
+
+		  (kind: Text(" )"), style: (fg: "#{{palette.text.hex}}", modififiers: "Bold")),
+		],
+
+		)
+	],
+
+
+    ),
+
     components: {},
     layout: Split(
         direction: Vertical,
         panes: [
             (
                 pane: Pane(Tabs),
-                size: "3",
+                size: "1",
+            ),
+            (
+                pane: Pane(Header),
+                size: "1",
             ),
             (
                 pane: Pane(TabContent),
