@@ -90,15 +90,19 @@
 		panes: [
   (size: "100%", pane: Pane(Property(content: [
   (kind: Text(" ("), style: (fg: "#4c4f69", modififiers: "Bold")),
-	  (kind: Property(Status(RepeatV2(on_label: "", off_label: "",
+
+    (kind: Property(Status(RepeatV2(on_label: "", off_label: "",
 				 on_style: (fg: "#40a02b", modifiers: "Bold"),
 				 off_style: (fg: "#acb0be", modifiers: "Bold"))))),
 
-	  (kind: Text(" | "), style: (fg: "#4c4f69", modififiers: "Bold")),
+	(kind: Text(" | "), style: (fg: "#4c4f69", modififiers: "Bold")),
 
-	  (kind: Property(Status(RandomV2(on_label: "", off_label: "",
+    (kind: Property(Status(RandomV2(on_label: "", off_label: "",
 				 on_style: (fg: "#ea76cb", modifiers: "Bold"),
 				 off_style: (fg: "#acb0be", modifiers: "Bold"))))), 
+    (kind: Text(" | "), style: (fg: "#4c4f69", modififiers: "Bold")),
+
+	(kind: Property(Status(SingleV2(on_label: "󰎤", off_label: "󰎦", oneshot_label: "󰇊", off_oneshot_label: "󱅊", on_style: (fg: "#7287fd", modifiers: "Bold"), off_style: (fg: "#acb0be", modifiers: "Bold"), oneshot_style: (fg: "#df8e1d", modifiers: "Bold"))))),
 
 	  (kind: Text(" )"), style: (fg: "#4c4f69", modififiers: "Bold")),
 

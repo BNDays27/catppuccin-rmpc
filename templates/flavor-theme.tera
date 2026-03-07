@@ -98,15 +98,19 @@ whiskers:
 		panes: [
   (size: "100%", pane: Pane(Property(content: [
   (kind: Text(" ("), style: (fg: "#{{palette.text.hex}}", modififiers: "Bold")),
-	  (kind: Property(Status(RepeatV2(on_label: "", off_label: "",
+
+    (kind: Property(Status(RepeatV2(on_label: "", off_label: "",
 				 on_style: (fg: "#{{palette.green.hex}}", modifiers: "Bold"),
 				 off_style: (fg: "#{{palette.surface2.hex}}", modifiers: "Bold"))))),
 
-	  (kind: Text(" | "), style: (fg: "#{{palette.text.hex}}", modififiers: "Bold")),
+	(kind: Text(" | "), style: (fg: "#{{palette.text.hex}}", modififiers: "Bold")),
 
-	  (kind: Property(Status(RandomV2(on_label: "", off_label: "",
+    (kind: Property(Status(RandomV2(on_label: "", off_label: "",
 				 on_style: (fg: "#{{palette.pink.hex}}", modifiers: "Bold"),
 				 off_style: (fg: "#{{palette.surface2.hex}}", modifiers: "Bold"))))), 
+    (kind: Text(" | "), style: (fg: "#{{palette.text.hex}}", modififiers: "Bold")),
+
+	(kind: Property(Status(SingleV2(on_label: "󰎤", off_label: "󰎦", oneshot_label: "󰇊", off_oneshot_label: "󱅊", on_style: (fg: "#{{palette.lavender.hex}}", modifiers: "Bold"), off_style: (fg: "#{{palette.surface2.hex}}", modifiers: "Bold"), oneshot_style: (fg: "#{{palette.yellow.hex}}", modifiers: "Bold"))))),
 
 	  (kind: Text(" )"), style: (fg: "#{{palette.text.hex}}", modififiers: "Bold")),
 
