@@ -73,32 +73,6 @@
         ),
     ],
 
-header: (
-	rows: [
-	(
-		left: [],
-		center: [],
-		right: [
-		  (kind: Text(" ( "), style: (fg: "#c6d0f5", modififiers: "Bold")),
-		  (kind: Property(Status(RepeatV2(on_label: "", off_label: "",
-                                         on_style: (fg: "#a6d189", modifiers: "Bold"),
-                                         off_style: (fg: "#626880", modifiers: "Bold"))))),
-
-		  (kind: Text(" | "), style: (fg: "#c6d0f5", modififiers: "Bold")),
-
-		  (kind: Property(Status(RandomV2(on_label: "", off_label: "",
-                                         on_style: (fg: "#f4b8e4", modifiers: "Bold"),
-                                         off_style: (fg: "#626880", modifiers: "Bold"))))), 
-
-		  (kind: Text(" ) "), style: (fg: "#c6d0f5", modififiers: "Bold")),
-		],
-
-		)
-	],
-
-
-    ),
-
     components: {},
     layout: Split(
         direction: Vertical,
@@ -107,14 +81,64 @@ header: (
                 pane: Pane(Tabs),
                 size: "1",
             ),
-            (
-                pane: Pane(Header),
-                size: "1",
-            ),
+            	    (
+		size: "1",
+		style: (align: Right),
+		pane: Split(
+		
+		direction: Horizontal,
+		panes: [
+  (size: "100%", pane: Pane(Property(content: [
+  (kind: Text(" ("), style: (fg: "#c6d0f5", modififiers: "Bold")),
+	  (kind: Property(Status(RepeatV2(on_label: "", off_label: "",
+				 on_style: (fg: "#a6d189", modifiers: "Bold"),
+				 off_style: (fg: "#626880", modifiers: "Bold"))))),
+
+	  (kind: Text(" | "), style: (fg: "#c6d0f5", modififiers: "Bold")),
+
+	  (kind: Property(Status(RandomV2(on_label: "", off_label: "",
+				 on_style: (fg: "#f4b8e4", modifiers: "Bold"),
+				 off_style: (fg: "#626880", modifiers: "Bold"))))), 
+
+	  (kind: Text(" )"), style: (fg: "#c6d0f5", modififiers: "Bold")),
+
+
+  ], style: (fg: "#c6d0f5"), align: Right))),
+		]
+
+		),
+
+	    ),
             (
                 pane: Pane(TabContent),
                 size: "100%",
             ),
+	    (
+	    	size: "1",
+		pane: Split(
+		direction: Horizontal,
+		panes: [
+		(size: "2", pane: Pane(Property(content: [(kind: Text("󰕾 ")),], style: (fg: "#c6d0f5"), align: Left))),
+		(size: "100%", pane: Pane(Volume(
+		kind: Slider(
+		symbols: (
+			filled: "─",
+	                thumb: "●",
+			track: "─",
+		),
+		track_style: (fg: "#626880"),
+		filled_style: (fg: "#ca9ee6"),
+		thumb_style: (fg: "#626880"),
+
+		)
+
+		))),
+		(size: "3", pane: Pane(Property(content: [(kind: Property(Status(Volume)), style: (fg: "#c6d0f5"))], align: Right))),
+		(size: "1", pane: Pane(Property(content: [(kind: Text("%")),], style: (fg: "#c6d0f5"), align: Left))),
+		]
+		)
+
+	    ),
             (
                 pane: Pane(ProgressBar),
                 size: "1",
