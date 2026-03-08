@@ -12,6 +12,7 @@ whiskers:
 (
     theme: Some("~/.config/rmpc/catppuccin-{{flavor.identifier}}.ron"),
     cache_dir: Some("~/.cache/rmpc"),
+    on_song_change: ["~/.config/rmpc/script.sh"], 
     lyrics_dir: Some("~/Music"),
     password: None,
     volume_step: 5,

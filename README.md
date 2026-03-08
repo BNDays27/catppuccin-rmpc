@@ -35,13 +35,8 @@
 </details>
 
 ## Usage
-1. Ensure you have both `rmpc` and `cava` installed.
+1. Ensure you have both `rmpc`, `jq` and `cava` installed.
 2. Copy all the files from the flavor of your choice from [`themes`](./themes) into `~/.config/rmpc/`
-
-## 🙋 FAQ
-
-- Q: How do you add automatic lyrics fetching?
-- A: If you want it, please use `on_song_change` and add this shell script from [the docs](https://rmpc.mierak.dev/guides/on_song_change/#automatically-fetch-lyrics)
 
 ## 💝 Thanks to
 
