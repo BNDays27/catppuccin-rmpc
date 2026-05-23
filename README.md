@@ -35,7 +35,7 @@
 </details>
 
 ## Usage
-1. Ensure you have both `rmpc`, `jq` and `cava` installed.
+1. Ensure you have `rmpc`, `jq` and `cava` installed from your package manager of choice.
 2. Copy all the files from the flavor of your choice from [`themes`](./themes) into `~/.config/rmpc/`
 
 ## 💝 Thanks to
