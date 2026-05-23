@@ -1,6 +1,6 @@
 ---
 whiskers:
-  version: 2.0.0
+  version: ^2.9.0
   matrix:
     - flavor
   filename: "themes/{{flavor.identifier}}/catppuccin-{{ flavor.identifier }}.ron"
@@ -20,8 +20,8 @@ whiskers:
     header_background_color: None,
     modal_background_color: None,
     modal_backdrop: false,
-    preview_label_style: (fg: "yellow"),
-    preview_metadata_group_style: (fg: "yellow", modifiers: "Bold"),
+    preview_label_style: (fg: "#{{palette.yellow.hex}}"),
+    preview_metadata_group_style: (fg: "#{{palette.yellow.hex}}", modifiers: "Bold"),
     tab_bar: (
         active_style: (fg: "#{{palette.base.hex}}", bg: "#{{palette.mauve.hex}}", modifiers: "Bold"),
         inactive_style: (fg: "#{{palette.text.hex}}", bg: "#{{palette.base.hex}}"),
@@ -48,10 +48,11 @@ whiskers:
         trace: (fg: "#{{palette.lavender.hex}}", bg: "#{{palette.base.hex}}"),
     ),
   progress_bar: (
-        symbols: ["█", "█", "", "█", "█"],
+        symbols: ["", "█", "", "█", ""],
         track_style: (fg: "#{{palette.mantle.hex}}"),
         elapsed_style: (fg: "#{{palette.mauve.hex}}"),
         thumb_style: (fg: "#{{palette.mauve.hex}}", bg: "#{{palette.mantle.hex}}"),
+        use_track_when_empty: false,
     ), 
     scrollbar: (
         symbols: ["│", "█", "", "󰅀"],
@@ -108,7 +109,13 @@ whiskers:
     (kind: Property(Status(RandomV2(on_label: "", off_label: "",
 				 on_style: (fg: "#{{palette.pink.hex}}", modifiers: "Bold"),
 				 off_style: (fg: "#{{palette.surface2.hex}}", modifiers: "Bold"))))), 
+
     (kind: Text(" | "), style: (fg: "#{{palette.text.hex}}", modififiers: "Bold")),
+
+
+    (kind: Property(Status(ConsumeV2(on_label: "󰮯",off_label: "󰮯",oneshot_label: "󰮯 󰇊",on_style: (fg: "#{{palette.yellow.hex}}", modifiers: "Bold"),off_style: (fg: "#{{palette.surface2.hex}}", modifiers: "Bold"),oneshot_style: (fg: "#{{palette.blue.hex}}", modifiers: "Bold"),)))),
+
+    (kind: Text(" | "), style: (fg: "#cdd6f4", modififiers: "Bold")),
 
 	(kind: Property(Status(SingleV2(on_label: "󰎤", off_label: "󰎦", oneshot_label: "󰇊", off_oneshot_label: "󱅊", on_style: (fg: "#{{palette.lavender.hex}}", modifiers: "Bold"), off_style: (fg: "#{{palette.surface2.hex}}", modifiers: "Bold"), oneshot_style: (fg: "#{{palette.yellow.hex}}", modifiers: "Bold"))))),
 

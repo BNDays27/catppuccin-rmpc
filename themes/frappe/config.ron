@@ -6,6 +6,7 @@
     cache_dir: Some("~/.cache/rmpc"),
     on_song_change: ["~/.config/rmpc/script.sh"], 
     lyrics_dir: Some("~/Music"),
+    enable_lyrics_hot_reload: true,
     password: None,
     volume_step: 5,
     max_fps: 180,
@@ -146,7 +147,7 @@ cava: (
                 (size: "38%", pane: Split(
                     direction: Vertical,
                     panes: [
-                       (size: "20", pane: Pane(AlbumArt), vertical_align: top),
+                       (size: "67%", pane: Pane(AlbumArt), vertical_align: top),
   
     (size: "1", pane: Pane(Property(
 
@@ -252,7 +253,7 @@ cava: (
 
                         panes: [
                         
-   (size: "20", pane: Pane(AlbumArt), vertical_align: Top), 
+   (size: "67%", pane: Pane(AlbumArt), vertical_align: Top), 
 
                         (size: "1", pane: Pane(Property(
 

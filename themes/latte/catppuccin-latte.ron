@@ -12,8 +12,8 @@
     header_background_color: None,
     modal_background_color: None,
     modal_backdrop: false,
-    preview_label_style: (fg: "yellow"),
-    preview_metadata_group_style: (fg: "yellow", modifiers: "Bold"),
+    preview_label_style: (fg: "#df8e1d"),
+    preview_metadata_group_style: (fg: "#df8e1d", modifiers: "Bold"),
     tab_bar: (
         active_style: (fg: "#eff1f5", bg: "#8839ef", modifiers: "Bold"),
         inactive_style: (fg: "#4c4f69", bg: "#eff1f5"),
@@ -40,10 +40,11 @@
         trace: (fg: "#7287fd", bg: "#eff1f5"),
     ),
   progress_bar: (
-        symbols: ["█", "█", "", "█", "█"],
+        symbols: ["", "█", "", "█", ""],
         track_style: (fg: "#e6e9ef"),
         elapsed_style: (fg: "#8839ef"),
         thumb_style: (fg: "#8839ef", bg: "#e6e9ef"),
+        use_track_when_empty: false,
     ), 
     scrollbar: (
         symbols: ["│", "█", "", "󰅀"],
@@ -100,7 +101,13 @@
     (kind: Property(Status(RandomV2(on_label: "", off_label: "",
 				 on_style: (fg: "#ea76cb", modifiers: "Bold"),
 				 off_style: (fg: "#acb0be", modifiers: "Bold"))))), 
+
     (kind: Text(" | "), style: (fg: "#4c4f69", modififiers: "Bold")),
+
+
+    (kind: Property(Status(ConsumeV2(on_label: "󰮯",off_label: "󰮯",oneshot_label: "󰮯 󰇊",on_style: (fg: "#df8e1d", modifiers: "Bold"),off_style: (fg: "#acb0be", modifiers: "Bold"),oneshot_style: (fg: "#1e66f5", modifiers: "Bold"),)))),
+
+    (kind: Text(" | "), style: (fg: "#cdd6f4", modififiers: "Bold")),
 
 	(kind: Property(Status(SingleV2(on_label: "󰎤", off_label: "󰎦", oneshot_label: "󰇊", off_oneshot_label: "󱅊", on_style: (fg: "#7287fd", modifiers: "Bold"), off_style: (fg: "#acb0be", modifiers: "Bold"), oneshot_style: (fg: "#df8e1d", modifiers: "Bold"))))),
 
