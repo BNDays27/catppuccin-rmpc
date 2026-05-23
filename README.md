@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/BNDays27/catppuccin-rmpc/refs/heads/main/assets/catwalk.webp"/>
+	<img src="./assets/catwalk.webp"/>
 </p>
 
 ## Previews
